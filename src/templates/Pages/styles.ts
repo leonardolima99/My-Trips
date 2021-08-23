@@ -19,7 +19,8 @@ export const Heading = styled.h1`
 export const Body = styled.div`
   // serve para estilos no body
   // p, a, ul, li, blackquote
-  p {
+  p,
+  a {
     font-size: var(--medium);
   }
 `
