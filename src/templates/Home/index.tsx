@@ -19,7 +19,7 @@ export default function HomeTemplate({ places }: MapProps) {
           url: 'https://my-trips.netlify.app',
           title: 'My Trips',
           description:
-            'A simple project to show in a map the places that  I went and show more informations and photos when clicked',
+            'A simple project to show in a map the places that  I went and show more informations and photos when clicked.',
           images: [
             {
               url: 'https://my-trips.netlify.app/img/cover.png',
@@ -27,8 +27,7 @@ export default function HomeTemplate({ places }: MapProps) {
               height: 720,
               alt: 'My Trips'
             }
-          ],
-          site_name: 'My Trips'
+          ]
         }}
       />
       <LinkWrapper href="/about">
