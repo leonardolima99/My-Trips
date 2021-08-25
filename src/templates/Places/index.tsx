@@ -43,9 +43,9 @@ export default function PlaceTemplate({ place }: PlaceTemplateProps) {
           place.description?.text ||
           'A simple project to show in a map the places that  I went and show more informations and photos when clicked.'
         }
-        canonical="https://my-trips.netlify.app"
+        canonical="https://my-trips-gilt.vercel.app"
         openGraph={{
-          url: 'https://my-trips.netlify.app',
+          url: 'https://my-trips-gilt.vercel.app',
           title: `${place.name} - My Trips`,
           description:
             place.description?.text ||
@@ -55,7 +55,7 @@ export default function PlaceTemplate({ place }: PlaceTemplateProps) {
               url: place.gallery[0].url,
               width: place.gallery[0].width,
               height: place.gallery[0].height,
-              alt: place.name
+              alt: `${place.name} - My Trips`
             }
           ]
         }}
