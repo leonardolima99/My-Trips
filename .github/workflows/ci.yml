@@ -1,5 +1,11 @@
 name: ci
-on: [pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
@@ -34,4 +40,10 @@ jobs:
         run: yarn test:ci
 
       - name: Build
+        env:
+          GRAPHQL_HOST: ${{ secrets.GRAPHQL_HOST }}
+          GRAPHQL_TOKEN: ${{ secrets.GRAPHQL_TOKEN }}
+          NEXT_PUBLIC_MAPBOX_API_KEY: ${{ secrets.NEXT_PUBLIC_MAPBOX_API_KEY }}
+          NEXT_PUBLIC_MAPBOX_USERID: ${{ secrets.NEXT_PUBLIC_MAPBOX_USERID }}
+          NEXT_PUBLIC_MAPBOX_STYLEID: ${{ secrets.NEXT_PUBLIC_MAPBOX_STYLEID }}
         run: yarn build
